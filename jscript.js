@@ -69,7 +69,10 @@ function startQuiz() {
   runGame();
 }
 
+//Received help from William on these functions
+
 function displayQuestion(x) {
+
   const questionSentence = document.getElementById("question");
 
   const choiceA = document.getElementById("A");
@@ -89,9 +92,11 @@ function displayQuestion(x) {
 
 function runGame(){
 
+    let isCorrect = false;
+
     for (p = 0; p < questions.length; p++){
 
-        
+        displayQuestion(p);
 
     }
 
