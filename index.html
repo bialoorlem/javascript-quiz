@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<style>
+
+ .clock {
+        font-family: "Tomorrow", sans-serif;
+      }
+
+</style>
 </head>
+
 <body>
-    
+
+            <!--Button taken from Bootstrap and CSS formatting found in Code Explained's Github found here: 
+        https://github.com/CodeExplainedRepo/Multiple-Choice-Quiz-JavaScript/blob/master/style.css -->
+
+    <div id="container">
+
+        <button type="button" class="btn btn-primary" id="start">Let's Begin!</button>
+        <div id="quiz" style="display: none">
+            <div id="question"></div>
+            <div id="qImg"></div>
+            <div id="choices">
+                
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+                
+            </div>
+        <!--<div class="col">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 id="clock" class="display-4 clock text-center">00:00:00</h1>
+            </div>
+          </div>
+        </div>-->
+            <div id="progress"></div>
+        </div>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="jscript.js"></script>
+    <script src="questions.js"></script>
 </body>
+
 </html>
