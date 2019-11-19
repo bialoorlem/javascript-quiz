@@ -7,8 +7,7 @@
 // function renderQuestion
 
 // // select all elements
-
-// const start = document.getElementById("start");
+ const start = document.getElementById("start");
 // const quiz = document.getElementById("quiz");
 // const question = document.getElementById("question");
 // const qImg = document.getElementById("qImg");
@@ -50,13 +49,14 @@ const questions = [
     answer: "Cascading Style Sheet"
   },
   {
-    title: "Who is the best CoHort student?",
-    choices: ["Elliot", "Elliot", "Elliot", "Elliot"],
-    answer: "Elliot"
+    title: "What's Brian's favorite color?",
+    choices: ["Salmon", "Generic Purple", "Thistle", "Rebecca Purple"],
+    answer: "Rebecca Purple"
   }
 ];
-
+let counter = 1;
 start.addEventListener("click", startQuiz);
+
 
 // start quiz
 function startQuiz() {
@@ -66,13 +66,14 @@ function startQuiz() {
   // renderProgress();
   // renderCounter();
   // TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
-  runGame();
+  displayQuestion(0);
+  
 }
+
 
 //Received help from William on these functions
 
 function displayQuestion(x) {
-
   const questionSentence = document.getElementById("question");
 
   const choiceA = document.getElementById("A");
@@ -85,21 +86,16 @@ function displayQuestion(x) {
   questionSentence.innerHTML = Object.values(questions[x]["title"]).join("");
 
   for (i = 0; i < choiceYoMomma.length; i++) {
-    choiceYoMomma[i].innerHTML = Object.values(questions[x]["choices"][i]).join("");
+    choiceYoMomma[i].innerHTML = Object.values(questions[x]["choices"][i]).join(
+      ""
+    );
   }
 }
 
 
-function runGame(){
-
-    let isCorrect = false;
-
-    for (p = 0; p < questions.length; p++){
-
-        displayQuestion(p);
-
-    }
-
+function checkAnswer() {
+    displayQuestion(counter);
+    counter++;
 }
 
 // // create some variables
@@ -123,8 +119,6 @@ function runGame(){
 //     choiceB.innerHTML = q.choiceB;
 //     choiceC.innerHTML = q.choiceC;
 // }
-
-
 
 // // render progress
 // function renderProgress(){
