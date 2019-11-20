@@ -133,6 +133,8 @@ function displayQuestion(x) {
 
 function checkAnswer(E) {
 
+  const scoreDisplay = document.getElementById("scoreNumber");
+
     displayQuestion(counter);
 
     console.log(Object.values(questions[counter]["choices"][E]).join(""))
@@ -147,6 +149,8 @@ displayQuestion(counter);
 
 score++;
 
+scoreDisplay.innerHTML = "Score: " + score;
+
 alert("Correct!")
 
     } else{
@@ -158,11 +162,3 @@ time = time -10;
     }
 
 }
-
-//   document.getElementById('show_scoreboard').onclick=function(){
-//      scoreboard.showScoreBoard();
-//  };
-//  document.getElementById('add_score').onclick=function(){
-//      score = document.getElementById('lbl_score').innerHTML;
-//      scoreboard.submitNewScoreDialog(score);
-//  };
