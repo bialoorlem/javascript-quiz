@@ -23,17 +23,23 @@
     <div id="container">
 
         <button type="button" class="btn btn-primary" id="start">Let's Begin!</button>
+
+<!--Where the questions and answers will show up -->
+
         <div id="quiz" style="display: none">
             <div id="question"></div>
             <div id="qImg"></div>
             <div id="choices">
 
-                <div class="choice" id="A" onclick="checkAnswer()"></div>
-                <div class="choice" id="B" onclick="checkAnswer()"></div>
-                <div class="choice" id="C" onclick="checkAnswer()"></div>
-                <div class="choice" id="D" onclick="checkAnswer()"></div>
+                <div class="choice" id="A" onclick="checkAnswer(0)"></div>
+                <div class="choice" id="B" onclick="checkAnswer(1)"></div>
+                <div class="choice" id="C" onclick="checkAnswer(2)"></div>
+                <div class="choice" id="D" onclick="checkAnswer(3)"></div>
                 
             </div>
+
+<!--running clock-->
+
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="col">
           <div class="jumbotron jumbotron-fluid">

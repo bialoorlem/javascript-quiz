@@ -1,23 +1,6 @@
-//Question rendering found here. Credit given to Code Explained on Youtube: https://www.youtube.com/watch?v=49pYIMygIcU
-
-// let lastQuestionIndex = questions.length - 1;
-
-// let runningQuestionIndex = 0;
-
-// function renderQuestion
-
 // // select all elements
  const start = document.getElementById("start");
-// const quiz = document.getElementById("quiz");
-// const question = document.getElementById("question");
-// const qImg = document.getElementById("qImg");
-// const choiceA = document.getElementById("A");
-// const choiceB = document.getElementById("B");
-// const choiceC = document.getElementById("C");
-// const counter = document.getElementById("counter");
-// const timeGauge = document.getElementById("timeGauge");
-// const progress = document.getElementById("progress");
-// const scoreDiv = document.getElementById("scoreContainer");
+
 
 // array of objects
 
@@ -54,28 +37,32 @@ const questions = [
     answer: "Rebecca Purple"
   }
 ];
-let counter = 1;
+
+
+let score = 0;
+let counter = 0;
+let time = 75;
 start.addEventListener("click", startQuiz);
 
 
 // start quiz
 function startQuiz() {
   start.style.display = "none";
-  // renderQuestion();
+
   quiz.style.display = "block";
-  // renderProgress();
-  // renderCounter();
-  // TIMER = setInterval(renderCounter,1000); // 1000ms = 1s
+
   displayQuestion(0);
   
 }
+
+//Function taken and modified from class activity
 
 function startTimer() {
 
 
   const clockEl = document.getElementById("clock");
   let savedValue = localStorage.getItem("time");
-  let time = 75;
+  
   
   let myInterval = null;
 
@@ -99,6 +86,8 @@ function startTimer() {
       if (seconds < 10) {
         seconds = "0" + seconds;
       }
+
+//use this line for the scoreboard, make sure it updates when a change is made to the score
 
       clockEl.innerHTML = hours + ":" + minutes + ":" + seconds;
 
@@ -132,15 +121,43 @@ function displayQuestion(x) {
 }
 
 
+//get the value of the users choice and then compare that value with the value of the answer
+
+//we need to get that i to be a new variable, and make it equal something different
+
+//we want to see the object.value in the if statement within the conditional part of it
 
 
-function checkAnswer() {
+//can check answers here
+
+
+function checkAnswer(E) {
+
     displayQuestion(counter);
-    counter++;
+
+    console.log(Object.values(questions[counter]["choices"][E]).join(""))
+
+
+    if(Object.values(questions[counter]["choices"][E]).join("") === Object.values(questions[counter]["answer"]).join("")){
+
+
+counter++;
+
+displayQuestion(counter);
+
+score++;
+
+    } else{
+
+time = time -10;
+
+    }
+
 }
 
-// function keepScore(){
+// function correctAnswers(){
 
-//    const  
+// counter++;
+
 
 // }
