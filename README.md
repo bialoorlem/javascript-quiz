@@ -24,3 +24,6 @@ The game appears as follows:
 ![Alt text](/relative/path/to/screenshot1?raw=true "2")
 
 ![Alt text](/relative/path/to/screenshot1?raw=true "3")
+
+Link to live version found here: https://bialoorlem.github.io/javascript-quiz/
+
