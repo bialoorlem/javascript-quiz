@@ -87,8 +87,6 @@ function startTimer() {
         seconds = "0" + seconds;
       }
 
-//use this line for the scoreboard, make sure it updates when a change is made to the score
-
       clockEl.innerHTML = hours + ":" + minutes + ":" + seconds;
 
       if (time <= 0) {
@@ -120,12 +118,6 @@ function displayQuestion(x) {
   }
 }
 
-
-//get the value of the users choice and then compare that value with the value of the answer
-
-//we need to get that i to be a new variable, and make it equal something different
-
-//we want to see the object.value in the if statement within the conditional part of it
 
 
 //can check answers here
