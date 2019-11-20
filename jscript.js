@@ -147,7 +147,11 @@ displayQuestion(counter);
 
 score++;
 
+alert("Correct!")
+
     } else{
+
+alert("Wrong!")
 
 time = time -10;
 
@@ -155,9 +159,10 @@ time = time -10;
 
 }
 
-// function correctAnswers(){
-
-// counter++;
-
-
-// }
+//   document.getElementById('show_scoreboard').onclick=function(){
+//      scoreboard.showScoreBoard();
+//  };
+//  document.getElementById('add_score').onclick=function(){
+//      score = document.getElementById('lbl_score').innerHTML;
+//      scoreboard.submitNewScoreDialog(score);
+//  };
