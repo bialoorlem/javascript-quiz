@@ -23,12 +23,7 @@ const questions = [
   },
   {
     title: "What does CSS stand for?",
-    choices: [
-      "Cascading Style Sheet",
-      "Cool School Studies",
-      "Carl Sucks Severely",
-      "This is correct"
-    ],
+    choices: ["Cascading Style Sheet","Cool School Studies","Carl Sucks Severely","This is correct"],
     answer: "Cascading Style Sheet"
   },
   {
@@ -62,6 +57,10 @@ function startTimer() {
 
   const clockEl = document.getElementById("clock");
   let savedValue = localStorage.getItem("time");
+
+  console.log(savedValue);
+  console.log(localStorage);
+
   
   
   let myInterval = null;
@@ -106,6 +105,7 @@ function displayQuestion(x) {
   const choiceB = document.getElementById("B");
   const choiceC = document.getElementById("C");
   const choiceD = document.getElementById("D");
+
 
   const choiceYoMomma = [choiceA, choiceB, choiceC, choiceD];
 
